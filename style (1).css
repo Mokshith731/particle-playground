@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0a0a12;
+  color: #eee;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+  padding: 16px 12px 8px;
+  z-index: 2;
+}
+
+header h1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  background: linear-gradient(90deg, #ff5f6d, #ffc371);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.subtitle {
+  font-size: 0.85rem;
+  color: #999;
+  margin-top: 4px;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: crosshair;
+}
+
+#ui {
+  position: relative;
+  z-index: 2;
+  margin-top: auto;
+  padding: 14px 16px 20px;
+  background: linear-gradient(180deg, transparent, rgba(10,10,18,0.85) 30%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.mode-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.bottom-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.mode-btn, #clearBtn, #soundBtn {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #eee;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.mode-btn:hover, #clearBtn:hover, #soundBtn:hover {
+  background: rgba(255,255,255,0.18);
+}
+
+#soundBtn.active {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  color: #fff;
+  font-weight: 600;
+  border-color: transparent;
+}
+
+.mode-btn.active {
+  background: linear-gradient(90deg, #ff5f6d, #ffc371);
+  color: #1a1a1a;
+  font-weight: 600;
+  border-color: transparent;
+}
+
+.sliders {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 0.75rem;
+  color: #bbb;
+}
+
+.sliders label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.sliders input[type="range"] {
+  width: 140px;
+  accent-color: #ff8a5b;
+}
+
+.palette {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.palette-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 14px;
+  padding: 8px 10px 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.palette-btn:hover {
+  background: rgba(255,255,255,0.1);
+  transform: translateY(-2px);
+}
+
+.palette-btn.active {
+  border-color: #fff;
+  background: rgba(255,255,255,0.14);
+}
+
+.swatch {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: block;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.15);
+}
+
+.palette-btn.active .swatch {
+  box-shadow: 0 0 0 2px #0a0a12, 0 0 0 3px #fff;
+}
+
+.palette-label {
+  font-size: 0.68rem;
+  color: #bbb;
+  letter-spacing: 0.3px;
+}
+
+.palette-btn.active .palette-label {
+  color: #fff;
+  font-weight: 600;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.7rem;
+  color: #555;
+  padding-bottom: 6px;
+  z-index: 2;
+}
+
+@media (max-width: 480px) {
+  header h1 { font-size: 1.3rem; }
+  .sliders input[type="range"] { width: 100px; }
+}
