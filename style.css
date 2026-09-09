@@ -65,7 +65,12 @@ canvas {
   justify-content: center;
 }
 
-.mode-btn, #clearBtn {
+.bottom-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.mode-btn, #clearBtn, #soundBtn {
   background: rgba(255,255,255,0.08);
   border: 1px solid rgba(255,255,255,0.15);
   color: #eee;
@@ -76,8 +81,15 @@ canvas {
   transition: all 0.15s ease;
 }
 
-.mode-btn:hover, #clearBtn:hover {
+.mode-btn:hover, #clearBtn:hover, #soundBtn:hover {
   background: rgba(255,255,255,0.18);
+}
+
+#soundBtn.active {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  color: #fff;
+  font-weight: 600;
+  border-color: transparent;
 }
 
 .mode-btn.active {
@@ -132,3 +144,4 @@ footer {
   header h1 { font-size: 1.3rem; }
   .sliders input[type="range"] { width: 100px; }
 }
+Add sound toggle feature
