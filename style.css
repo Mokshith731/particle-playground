@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0a0a12;
+  color: #eee;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+  padding: 16px 12px 8px;
+  z-index: 2;
+}
+
+header h1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  background: linear-gradient(90deg, #ff5f6d, #ffc371);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.subtitle {
+  font-size: 0.85rem;
+  color: #999;
+  margin-top: 4px;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: crosshair;
+}
+
+#ui {
+  position: relative;
+  z-index: 2;
+  margin-top: auto;
+  padding: 14px 16px 20px;
+  background: linear-gradient(180deg, transparent, rgba(10,10,18,0.85) 30%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.mode-buttons, .palette {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.mode-btn, #clearBtn {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #eee;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.mode-btn:hover, #clearBtn:hover {
+  background: rgba(255,255,255,0.18);
+}
+
+.mode-btn.active {
+  background: linear-gradient(90deg, #ff5f6d, #ffc371);
+  color: #1a1a1a;
+  font-weight: 600;
+  border-color: transparent;
+}
+
+.sliders {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 0.75rem;
+  color: #bbb;
+}
+
+.sliders label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.sliders input[type="range"] {
+  width: 140px;
+  accent-color: #ff8a5b;
+}
+
+.palette-btn {
+  width: 36px;
+  height: 22px;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.palette-btn.active {
+  border-color: #fff;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.7rem;
+  color: #555;
+  padding-bottom: 6px;
+  z-index: 2;
+}
+
+@media (max-width: 480px) {
+  header h1 { font-size: 1.3rem; }
+  .sliders input[type="range"] { width: 100px; }
+}
