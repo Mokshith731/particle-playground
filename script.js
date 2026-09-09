@@ -261,4 +261,4 @@ document.getElementById('clearBtn').addEventListener('click', () => {
   ctx.fillStyle = '#0a0a12';
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 });
-Add sound toggle feature
+
