@@ -50,4 +50,4 @@ Then visit `http://localhost:8000`.
 - Save/share custom palettes
 - Add a "black hole" mode with particle destruction
 - WebGL rewrite for higher particle counts
-- Add sound toggle feature
+
