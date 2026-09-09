@@ -17,6 +17,7 @@ Other features:
 - Click/tap anywhere for a particle burst
 - Trail-fade rendering for a smooth glowing effect
 - Fully responsive, works on mobile with touch support
+- Sound toggle: synthesized burst pops, mode-switch blips, and a mouse-driven ambient drone — all generated live with the Web Audio API, no audio files
 
 ## How it works
 
@@ -49,3 +50,4 @@ Then visit `http://localhost:8000`.
 - Save/share custom palettes
 - Add a "black hole" mode with particle destruction
 - WebGL rewrite for higher particle counts
+- Add sound toggle feature
